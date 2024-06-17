@@ -9,16 +9,20 @@
 /* Begin PBXBuildFile section */
 		C154C4832C20036300F62B2B /* ListViewApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C154C4822C20036300F62B2B /* ListViewApp.swift */; };
 		C154C4852C20036300F62B2B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C154C4842C20036300F62B2B /* ContentView.swift */; };
-		C154C4872C20036400F62B2B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C154C4862C20036400F62B2B /* Assets.xcassets */; };
 		C154C48A2C20036400F62B2B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C154C4892C20036400F62B2B /* Preview Assets.xcassets */; };
+		C154C4912C200F6700F62B2B /* Book.swift in Sources */ = {isa = PBXBuildFile; fileRef = C154C4902C200F6700F62B2B /* Book.swift */; };
+		C154C4932C200FA400F62B2B /* BooksListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C154C4922C200FA400F62B2B /* BooksListView.swift */; };
+		C154C4972C20116000F62B2B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C154C4962C20116000F62B2B /* Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		C154C47F2C20036300F62B2B /* ListView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ListView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C154C4822C20036300F62B2B /* ListViewApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewApp.swift; sourceTree = "<group>"; };
 		C154C4842C20036300F62B2B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		C154C4862C20036400F62B2B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C154C4892C20036400F62B2B /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		C154C4902C200F6700F62B2B /* Book.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Book.swift; sourceTree = "<group>"; };
+		C154C4922C200FA400F62B2B /* BooksListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BooksListView.swift; sourceTree = "<group>"; };
+		C154C4962C20116000F62B2B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,9 +55,11 @@
 		C154C4812C20036300F62B2B /* ListView */ = {
 			isa = PBXGroup;
 			children = (
+				C154C4902C200F6700F62B2B /* Book.swift */,
+				C154C4922C200FA400F62B2B /* BooksListView.swift */,
 				C154C4822C20036300F62B2B /* ListViewApp.swift */,
 				C154C4842C20036300F62B2B /* ContentView.swift */,
-				C154C4862C20036400F62B2B /* Assets.xcassets */,
+				C154C4962C20116000F62B2B /* Assets.xcassets */,
 				C154C4882C20036400F62B2B /* Preview Content */,
 			);
 			path = ListView;
@@ -126,7 +132,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C154C48A2C20036400F62B2B /* Preview Assets.xcassets in Resources */,
-				C154C4872C20036400F62B2B /* Assets.xcassets in Resources */,
+				C154C4972C20116000F62B2B /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -139,6 +145,8 @@
 			files = (
 				C154C4852C20036300F62B2B /* ContentView.swift in Sources */,
 				C154C4832C20036300F62B2B /* ListViewApp.swift in Sources */,
+				C154C4912C200F6700F62B2B /* Book.swift in Sources */,
+				C154C4932C200FA400F62B2B /* BooksListView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
