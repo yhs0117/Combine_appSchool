@@ -13,6 +13,7 @@
 		C154C4342C1FC37B00F62B2B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C154C4332C1FC37B00F62B2B /* Assets.xcassets */; };
 		C154C4372C1FC49800F62B2B /* Book.swift in Sources */ = {isa = PBXBuildFile; fileRef = C154C4362C1FC49800F62B2B /* Book.swift */; };
 		C154C4392C1FD2E100F62B2B /* BookListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C154C4382C1FD2E100F62B2B /* BookListView.swift */; };
+		C154C4992C202D0D00F62B2B /* BookDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C154C4982C202D0D00F62B2B /* BookDetailView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +24,7 @@
 		C154C4332C1FC37B00F62B2B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = ../../../../Downloads/Assets.xcassets; sourceTree = "<group>"; };
 		C154C4362C1FC49800F62B2B /* Book.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Book.swift; sourceTree = "<group>"; };
 		C154C4382C1FD2E100F62B2B /* BookListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookListView.swift; sourceTree = "<group>"; };
+		C154C4982C202D0D00F62B2B /* BookDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookDetailView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +61,7 @@
 				C154C4252C1FC31100F62B2B /* BookShelfApp.swift */,
 				C154C4272C1FC31100F62B2B /* BookRowView.swift */,
 				C154C4382C1FD2E100F62B2B /* BookListView.swift */,
+				C154C4982C202D0D00F62B2B /* BookDetailView.swift */,
 				C154C4332C1FC37B00F62B2B /* Assets.xcassets */,
 				C154C42B2C1FC31200F62B2B /* Preview Content */,
 			);
@@ -153,6 +156,7 @@
 			files = (
 				C154C4282C1FC31100F62B2B /* BookRowView.swift in Sources */,
 				C154C4262C1FC31100F62B2B /* BookShelfApp.swift in Sources */,
+				C154C4992C202D0D00F62B2B /* BookDetailView.swift in Sources */,
 				C154C4372C1FC49800F62B2B /* Book.swift in Sources */,
 				C154C4392C1FD2E100F62B2B /* BookListView.swift in Sources */,
 			);
