@@ -14,6 +14,7 @@
 		C154C46F2C1FF26C00F62B2B /* ContentIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C154C46E2C1FF26C00F62B2B /* ContentIView.swift */; };
 		C154C4712C1FF6C600F62B2B /* EnvironmentObjectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C154C4702C1FF6C600F62B2B /* EnvironmentObjectView.swift */; };
 		C154C4732C1FFD2D00F62B2B /* SettingScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = C154C4722C1FFD2D00F62B2B /* SettingScreen.swift */; };
+		C154C4752C1FFF3800F62B2B /* UserProfileScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = C154C4742C1FFF3800F62B2B /* UserProfileScreen.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +26,7 @@
 		C154C46E2C1FF26C00F62B2B /* ContentIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentIView.swift; sourceTree = "<group>"; };
 		C154C4702C1FF6C600F62B2B /* EnvironmentObjectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnvironmentObjectView.swift; sourceTree = "<group>"; };
 		C154C4722C1FFD2D00F62B2B /* SettingScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingScreen.swift; sourceTree = "<group>"; };
+		C154C4742C1FFF3800F62B2B /* UserProfileScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileScreen.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +64,7 @@
 				C154C46E2C1FF26C00F62B2B /* ContentIView.swift */,
 				C154C4702C1FF6C600F62B2B /* EnvironmentObjectView.swift */,
 				C154C4722C1FFD2D00F62B2B /* SettingScreen.swift */,
+				C154C4742C1FFF3800F62B2B /* UserProfileScreen.swift */,
 				C154C4642C1FEF9D00F62B2B /* Assets.xcassets */,
 				C154C4662C1FEF9D00F62B2B /* Preview Content */,
 			);
@@ -146,6 +149,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C154C4752C1FFF3800F62B2B /* UserProfileScreen.swift in Sources */,
 				C154C46F2C1FF26C00F62B2B /* ContentIView.swift in Sources */,
 				C154C4732C1FFD2D00F62B2B /* SettingScreen.swift in Sources */,
 				C154C4712C1FF6C600F62B2B /* EnvironmentObjectView.swift in Sources */,
