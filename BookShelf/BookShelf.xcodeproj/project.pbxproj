@@ -64,9 +64,9 @@
 				C154C4272C1FC31100F62B2B /* BookRowView.swift */,
 				C154C4382C1FD2E100F62B2B /* BookListView.swift */,
 				C154C4982C202D0D00F62B2B /* BookDetailView.swift */,
+				C10D5ECB2C21087300A404EA /* BookEditView.swift */,
 				C154C4332C1FC37B00F62B2B /* Assets.xcassets */,
 				C154C42B2C1FC31200F62B2B /* Preview Content */,
-				C10D5ECB2C21087300A404EA /* BookEditView.swift */,
 			);
 			path = BookShelf;
 			sourceTree = "<group>";
