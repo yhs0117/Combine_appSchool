@@ -5,14 +5,12 @@
 //  Created by 육현서 on 6/20/24.
 //
 
-import SwiftUI
+import Foundation
 
-struct SignUpFormViewModel: View {
-    var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
-    }
-}
-
-#Preview {
-    SignUpFormViewModel()
+class SignUpFormViewModel: ObservableObject {
+    @Published var username: String = ""
+    @Published var usernameMessage: String = ""
+    @Published var isValid: Bool = false
+    @Published var showUpdateDialog: Bool = false
+    
 }
