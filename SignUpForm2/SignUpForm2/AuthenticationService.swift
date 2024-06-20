@@ -5,14 +5,11 @@
 //  Created by 육현서 on 6/20/24.
 //
 
-import SwiftUI
+import Foundation
+import Combine
 
-struct AuthenticationService: View {
-    var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+struct AuthenticationService {
+    func checkUserNameAvailablePublisher(userName: String) -> AnyPublisher<Bool, Error> {
+        return Fail(error: APIError.invaildResponse).eraseToAnyPublisher()
     }
-}
-
-#Preview {
-    AuthenticationService()
 }
