@@ -16,9 +16,7 @@ class SignUpFormViewModel: ObservableObject {
     @Published var usernameMessage: String = ""
     @Published var passwordMessage: String = ""
     @Published var isValid: Bool = false
-    
-    @Published var isUserNameAvailable: Bool = false
-    
+        
     private let authenticationService = AuthenticationService()
     
     private var cancellables: Set<AnyCancellable> = []
@@ -45,35 +43,55 @@ class SignUpFormViewModel: ObservableObject {
     }()
     
     private lazy var isFormValidPublisher: AnyPublisher<Bool, Never> = {
-        Publishers.CombineLatest(isUsernameLengthValidPublisher, isPasswordValidPublisher)
-            .map { $0 && $1 }
+        Publishers.CombineLatest3(isUsernameLengthValidPublisher, isUsernameAvailablePublisher, isPasswordValidPublisher)
+            .map { $0 && $1 && $2 }
             .eraseToAnyPublisher()
     }()
-
-    func checkUserNameAvailable(_ userName: String) {
-        authenticationService.checkUserNameAvailableWithClosure(userName: userName) { [weak self] result in
-            DispatchQueue.main.async {
-                switch result {
-                case .success(let isAvailable):
-                    self?.isUserNameAvailable = isAvailable
-                case .failure(let error):
-                    print("error: \(error)")
-                    self?.isUserNameAvailable = false
-                }
+    
+    private lazy var isUsernameAvailablePublisher: AnyPublisher<Bool, Never> = {
+        $username
+            .debounce(for: 0.5, scheduler: RunLoop.main)
+            .removeDuplicates()
+            .flatMap { username -> AnyPublisher<Bool, Never> in
+                self.authenticationService.checkUserNameAvailableNaive(userName: username)
             }
-        }
-    }
+            .receive(on: DispatchQueue.main)
+            .share()
+            .print("share")
+            .eraseToAnyPublisher()
+    }()
+    
+//    func checkUserNameAvailable(_ userName: String) {
+//        authenticationService.checkUserNameAvailableWithClosure(userName: userName) {
+//            [weak self] result in
+//            DispatchQueue.main.async {
+//                switch result {
+//                case .success(let isAvailable):
+//                    self?.isUserNameAvailable = isAvailable
+//                case .failure(let error):
+//                    print("error: \(error)")
+//                    self?.isUserNameAvailable = false
+//                }
+//            }
+//        }
+//    }
     
     init() {
-        $username
-            .debounce(for: 0.5, scheduler: DispatchQueue.main)
-            .sink { [weak self] userName in
-                self?.checkUserNameAvailable(userName)
-            }
-            .store(in: &cancellables)
+        
         isFormValidPublisher.assign(to: &$isValid)
-        isUsernameLengthValidPublisher.map { $0 ? "" : "Username must be at least three characters!"}
+        
+        Publishers.CombineLatest(isUsernameLengthValidPublisher, isUsernameAvailablePublisher)
+            .map { isUsernameLengthValid, isUserNameAvailable in
+                if !isUsernameLengthValid {
+                    return "Username must be at least three characters!"
+                } else if !isUserNameAvailable {
+                    return "This username is already taken."
+                }
+                return ""
+            }
             .assign(to: &$usernameMessage)
+//        isUsernameLengthValidPublisher.map { $0 ? "" : "Username must be at least three characters!"}
+//            .assign(to: &$usernameMessage)
         
         Publishers.CombineLatest(isPasswordEmptyPublisher, isPasswordMatchingPublisher)
             .map { isPasswordEmpty, isPasswordMatching in
@@ -96,7 +114,7 @@ struct ContentView: View {
             // Username
             Section {
                 TextField("Username", text: $viewModel.username)
-                    .textInputAutocapitalization(.none)
+                    .textInputAutocapitalization(.never)
                     .autocorrectionDisabled()
             } footer: {
                 Text(viewModel.usernameMessage)
